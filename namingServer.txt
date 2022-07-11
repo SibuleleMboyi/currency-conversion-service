@@ -1,0 +1,3 @@
+- All the instances of microservices register in the Naming Server or Service Registry.
+- When each microservice wants to interact with the other, it requests for the available instances
+  of that particular microservice from the Naming Server.
