@@ -45,7 +45,7 @@ public class CurrencyConversionController {
                                 currencyConversion.getConversionMultiple(),
 
                                 currencyConversion.getTotalCalculatedAmount(), quantity,
-                                currencyConversion.getEnvironment());
+                                currencyConversion.getEnvironment() + " " + "hard coded config");
 
                 logger.info(currencyConversion2.toString());
                 return currencyConversion2;

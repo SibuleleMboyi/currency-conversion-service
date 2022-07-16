@@ -10,7 +10,11 @@ import com.in28minutes.microservices.currencyconversionservice.models.CurrencyCo
 // This name is configured in the application.properties of the application we are calling.
 // configured in this manner,
 // spring.application.name=currency-exchange
-@FeignClient(name = "currency-exchange", url = "localhost:8000")
+
+// To load balance, we comment this old line and update it.
+// @FeignClient(name = "currency-exchange", url = "localhost:8000")
+
+@FeignClient(name = "currency-exchange")
 public interface CurrencyExchangeProxy {
 
     @GetMapping("/jpa-currency-exchange/from/{from}/to/{to}")
